@@ -1,0 +1,21 @@
+version: "2.0"
+services:
+  jd:
+    image: nevinee/jd:v4
+    container_name: jd         # xxxx改为你自己想要的容器名字
+    restart: always
+    tty: true
+    network_mode: host
+    hostname: jd         # xxxx改为你自己想要的网络名字
+    volumes:
+      - $PWD/config:/jd/config         # xxxx改为你自己想要的路径
+      - $PWD/log:/jd/log         # xxxx改为你自己想要的路径
+      - $PWD/own:/jd/own         # own脚本目录，如需使用，建议映射，xxxx改为你自己想要的路径
+      - $PWD/scripts:/jd/scripts         # 如果想要看到lxk0301大佬的js脚本，可以解除本行注释，xxxx改为你自己想要的路径
+      - $PWD/jbot/diy:/jd/jbot/diy         # 自定义Bot命令
+    ports:
+      - 5678:5678         # xxxx改为你自己想要的端口
+    environment: 
+      - ENABLE_TTYD=true             
+      - ENABLE_WEB_PANEL=true         # 是否在启动容器时自动启动控制面板
+      - ENABLE_HANGUP=true         # 是否在启动容器时自动启动挂机程序
