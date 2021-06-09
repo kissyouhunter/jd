@@ -18,7 +18,7 @@ else
   git_clone_scripts ${url} ${repo_path} "main"
 fi
 
-cp -rf "$repo_path/jbot" $dir_root
+cp -rf "$repo_path/kissyouhunter_jdbot" $dir_root
 if [[ ! -f "$dir_root/config/bot.json" ]]; then
   cp -f "$repo_path/config/bot.json" "$dir_root/config"
 fi
