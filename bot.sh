@@ -3,8 +3,8 @@
 ## 导入通用变量与函数
 dir_shell=/ql/shell
 . $dir_shell/share.sh
-repo_path="${dir_repo}/weizuo0408_jddockerbot"
-url="https://github.com/weizuo0408/jddockerbot"
+repo_path="${dir_repo}/kissyouhunter_jdbot"
+url="https://github.com/kissyouhunter/jdbot"
 
 echo -e "\n1、安装bot依赖...\n"
 apk --no-cache add -f zlib-dev gcc jpeg-dev python3-dev musl-dev freetype-dev
