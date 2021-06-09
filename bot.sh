@@ -18,7 +18,7 @@ else
   git_clone_scripts ${url} ${repo_path} "main"
 fi
 
-cp -rf "$repo_path/kissyouhunter_jdbot" $dir_root
+cp -rf "$repo_path/jbot" $dir_root
 if [[ ! -f "$dir_root/config/bot.json" ]]; then
   cp -f "$repo_path/config/bot.json" "$dir_root/config"
 fi
@@ -28,7 +28,7 @@ echo -e "3、安装python3依赖...\n"
 if [[ $PipMirror ]]; then
   pip3 config set global.index-url $PipMirror
 fi
-cp -f "$repo_path/kissyouhunter_jdbot/requirements.txt" "$dir_root"
+cp -f "$repo_path/jbot/requirements.txt" "$dir_root"
 pip3 --default-timeout=100 install -r requirements.txt --no-cache-dir
 echo -e "\npython3依赖安装成功...\n"
 
