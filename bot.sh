@@ -28,7 +28,7 @@ echo -e "3、安装python3依赖...\n"
 if [[ $PipMirror ]]; then
   pip3 config set global.index-url $PipMirror
 fi
-cp -f "$repo_path/jbot/requirements.txt" "$dir_root"
+cp -f "$repo_path/kissyouhunter_jdbot/requirements.txt" "$dir_root"
 pip3 --default-timeout=100 install -r requirements.txt --no-cache-dir
 echo -e "\npython3依赖安装成功...\n"
 
